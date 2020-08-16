@@ -1,0 +1,11 @@
+{
+  "name": "WheelieGood",
+  "version": "1.0.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "bootstrap": "^4.5.2",
+    "datatables.net-bs": "^1.10.21",
+    "datatables.net-dt": "^1.10.21",
+    "jquery": "^3.5.1"
+  }
+}

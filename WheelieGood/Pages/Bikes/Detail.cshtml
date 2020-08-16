@@ -1,0 +1,41 @@
+﻿@page "{bikeId:int}"
+@model WheelieGood.Pages.Bikes.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<h2>@Model.Bike.Model</h2>
+@if (Model.Bike.MainImage != null)
+{
+    <div>
+        <img src="@Model.Bike.MainImage.Url" height="300" />
+    </div>
+}
+else
+{
+    <div>
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdata.grindcitymedia.com%2F2020%2F07%2F29%2Frise-grind-brevin-knight-deangelo-williams-join-the-show%2F&psig=AOvVaw0qeVqZeSl5ns-CdW5cjPr7&ust=1596550093509000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDB_-Ca_-oCFQAAAAAdAAAAABAN" height="300" />
+    </div>
+}
+
+<div class="panel-primary">
+
+    @if (Model.Bike.SecondaryImages != null)
+    {
+        foreach (var item in Model.Bike.SecondaryImages)
+        {
+            <img src="@item.Url" height="100" />
+        }
+    }
+
+
+</div>
+<div>
+    Make: @Model.Bike.Make
+</div>
+@if (Model.Message != null)
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+<a asp-page="./List" class="btn btn-default">All Bikes</a>

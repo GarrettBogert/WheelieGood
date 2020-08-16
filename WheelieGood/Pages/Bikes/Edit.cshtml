@@ -1,0 +1,39 @@
+﻿@page "{bikeId:int?}"
+@model WheelieGood.Pages.Bikes.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Editing @Model.Bike.Model</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Bike.Id" />
+    <div class="form-group">
+        <label asp-for="Bike.Model"></label>
+        <input asp-for="Bike.Model" class="form-control" />
+        <span class="text-danger" asp-validation-for="Bike.Model"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bike.Make"></label>
+        <select class="form-control" asp-for="Bike.Make" asp-items="Model.Manufacturers">
+        </select>
+        <span class="text-danger" asp-validation-for="Bike.Make"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bike.HP"></label>
+        <input asp-for="Bike.HP" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Bike.Wet_Weight"></label>
+        <input asp-for="Bike.Wet_Weight" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Save
+    </button>
+
+</form>
+
+@section Scripts{ 
+<partial name="_ValidationScriptsPartial" />
+}

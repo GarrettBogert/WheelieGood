@@ -1,0 +1,15 @@
+﻿@model WheelieGood.Core.Article
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@Model.ImageUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            @{ 
+                string shortDescription = (@Model.Content.Length < 75 ? Model.Content : @Model.Content.Substring(0, 75));
+            }
+            <p class="card-text">@Html.Raw(@shortDescription)</p>
+            
+            <a class="btn btn-primary" asp-page="/Articles/Details" asp-route-articleId="@Model.Id">Read More</a>
+
+        </div>
+    </div>

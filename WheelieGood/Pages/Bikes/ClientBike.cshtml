@@ -1,0 +1,40 @@
+﻿@page
+@model WheelieGood.Pages.Bikes.ClientBikeModel
+@{
+    ViewData["Title"] = "ClientBike";
+}
+
+<h2>ClientBike</h2>
+
+<table class="table" id="bikes"></table>
+@section Scripts{ 
+    <environment include="Development">
+        <script src="~/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+        <script src="C:\Users\Garrett\source\repos\WheelieGood\WheelieGood\node_modules\datatables.net-bs\js\dataTables.bootstrap.js"></script>
+        <link href="C:\Users\Garrett\source\repos\WheelieGood\WheelieGood\node_modules\datatables.net-bs\css\dataTables.bootstrap.css" rel="stylesheet" />
+    </environment>
+<environment exclude="Development">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+</environment>
+<script>
+    $(function () {
+        var makes = ["penis", "fuck", "fart", "poo", "pussyshit"];
+            
+        $.ajax("/api/bikes/",
+            { method: "get" })
+            .then(function (response) {
+                $("#bikes").dataTable({
+            data: response,
+                    columns: [
+                        { "data": "make", "render": function (data) { return makes[data]; } },
+                        { "data": "model" },
+                        { "data": "hp" },
+                        { "data": "wet_Weight" }
+                    ]
+                });
+        });
+    });
+</script>
+}
