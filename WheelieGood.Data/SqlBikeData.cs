@@ -1,7 +1,6 @@
-﻿using WheelieGood.Data;
-using WheelieGood.Core;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using WheelieGood.Core;
 
 namespace WheelieGood.Data
 {
@@ -20,7 +19,7 @@ namespace WheelieGood.Data
 
         public int Commit()
         {
-            return db.SaveChanges(); 
+            return db.SaveChanges();
         }
 
         public Bike Delete(int id)

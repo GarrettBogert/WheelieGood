@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WheelieGood.Core;
-using WheelieGood.Core;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace WheelieGood.Data
 {
@@ -23,19 +19,5 @@ namespace WheelieGood.Data
                 .HasKey(o => o.Id);
            
         }
-        //private static BikeManufacturer[] getStaticManufacturers()
-        //{
-
-        //    var manufacturers = new List<BikeManufacturer>();
-       
-        //        manufacturers.Add(new BikeManufacturer { Id = 0, Name = "Honda" }      );
-        //        manufacturers.Add(new BikeManufacturer { Id = 1, Name = "Yamaha" }     );
-        //        manufacturers.Add(new BikeManufacturer { Id = 2, Name = "Suzuki" }     );
-        //        manufacturers.Add(new BikeManufacturer { Id = 3, Name = "Beta" }       );
-        //        manufacturers.Add(new BikeManufacturer { Id = 4, Name = "Husqvarna" }  );
-        //        manufacturers.Add(new BikeManufacturer { Id = 5, Name = "KTM" }        );
-        //        manufacturers.Add(new BikeManufacturer { Id = 6, Name = "Indian" }     );
-        //    return manufacturers.ToArray();
-        //}
     }
 }

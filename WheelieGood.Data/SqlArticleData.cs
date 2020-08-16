@@ -1,8 +1,6 @@
-﻿using WheelieGood.Core;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using WheelieGood.Core;
 
 namespace WheelieGood.Data
 {
@@ -13,6 +11,7 @@ namespace WheelieGood.Data
         {
             this.db = db;
         }
+
         public Article Add(Article newArticle)
         {
             db.Add(newArticle);
@@ -36,9 +35,7 @@ namespace WheelieGood.Data
 
         public IEnumerable<Article> GetArticles(int count)
         {
-
-            return db.Articles.Take(count);
-           
+            return db.Articles.Take(count)
         }
 
         public Article GetById(int id)
