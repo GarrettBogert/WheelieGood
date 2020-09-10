@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WheelieGood.Core", "Wheelie
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WheelieGood.Data", "WheelieGood.Data\WheelieGood.Data.csproj", "{411C5624-E949-4069-B042-19258E07891A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WheelieGood.Tests", "WheelieGood.Tests\WheelieGood.Tests.csproj", "{077DC169-44D5-4123-9811-1CEACBB63C25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{411C5624-E949-4069-B042-19258E07891A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{411C5624-E949-4069-B042-19258E07891A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{411C5624-E949-4069-B042-19258E07891A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077DC169-44D5-4123-9811-1CEACBB63C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077DC169-44D5-4123-9811-1CEACBB63C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077DC169-44D5-4123-9811-1CEACBB63C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077DC169-44D5-4123-9811-1CEACBB63C25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -35,7 +35,7 @@ namespace WheelieGood.Data
 
         public IEnumerable<Article> GetArticles(int count)
         {
-            return db.Articles.Take(count)
+            return db.Articles.Take(count);
         }
 
         public Article GetById(int id)

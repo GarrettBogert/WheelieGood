@@ -50,6 +50,7 @@ namespace WheelieGood
             }
 
             app.UseHttpsRedirection();
+            //This allows us to host static files from node_modules folder.
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
